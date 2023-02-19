@@ -1,0 +1,176 @@
+/* 全体のスタイル */
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    ;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* サイドバー */
+.sidebar {
+    background-color: #fff;
+    color: #4c5258;
+    box-shadow: 5px 0px 10px rgba(0,0,0,0.08);
+}
+
+.sidebar-title {
+    padding-left: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 7px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.sidebar-menu-dev {
+    padding-top:1.6rem;
+    padding-left: 1rem;
+}
+
+.sidebar-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar-menu li {
+    margin-bottom: 1.6rem;
+}
+
+.sidebar-menu li a {
+    color: #4c5258;
+    text-decoration: none;
+}
+
+.sidebar-menu li.active a {
+    text-decoration: underline;
+}
+
+/* ヘッダー */
+header {
+    left: 200px;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #fff;
+    padding: 1rem 1rem;
+}
+
+.user-icon {
+    margin-right: 1rem;
+}
+
+.user-icon img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.user-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.user-menu li {
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+.user-menu li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* コンテンツエリア */
+main {
+    background-color: #f4f4f4;
+    flex: 1;
+    padding: 1rem;
+}
+
+/* フッター */
+footer {
+    /* background-color: #fff;
+    text-align: center;
+    padding: 0.5rem; */
+    background: #fff;
+    left: 200px;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    text-align: center;
+    padding: 7px;
+    font-size: 14px;
+    border-top: 1px solid #e4e4e4;
+    z-index: 3;
+    box-shadow: inset 5px 0px 10px rgba(0,0,0,0.08);
+}
+
+footer p {
+    margin-bottom: 0px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 200px;
+    background-color: #fff;
+    color: #000;
+    transition: all 0.3s;
+}
+
+.sidebar.active {
+    left: 0;
+    /* 左に移動して表示する */
+}
+
+main {
+    /* サイドバーの幅分だけコンテンツを右にずらす */
+    margin-left: 200px;
+    transition: all 0.3s;
+    border-bottom: solid #d9d9d9;
+    padding-left: 2rem;
+    padding-top: 1.5rem;
+    padding-right: 2rem;
+    /* box-shadow: inset 5px 0px 10px rgba(0,0,0,0.08); */
+}
+
+main.active {
+    margin-left: 0;
+    /* 左に移動して表示する */
+}
+
+div .dropdown i {
+    font-size: 28px
+}
+
+.page-content {
+    padding: 15px;
+    border-radius: 5px 5px 5px 5px;
+    background-color: #fff;
+    height:100vh;
+    box-shadow: 2px 0px 10px rgba(0,0,0,0.08);
+}
+
+.page-content h1 {
+    color: #32393f;
+}
+
+.page-content-h1 {
+    position: relative;
+}
+
+.btn-custom {
+    position: absolute;
+    text-align:righ;
+}
