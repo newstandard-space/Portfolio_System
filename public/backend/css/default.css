@@ -55,6 +55,20 @@ body {
     text-decoration: underline;
 }
 
+/* コンテンツエリア */
+main {
+    margin-left: 200px;
+    flex: 1;
+    background-color: #f4f4f4;
+    /* サイドバーの幅分だけコンテンツを右にずらす */
+    padding-left: 2rem;
+    padding-top: 1.5rem;
+    padding-right: 2rem;
+    transition: all 0.3s;
+    border-bottom: solid #d9d9d9;
+    /* box-shadow: inset 5px 0px 10px rgba(0,0,0,0.08); */
+}
+
 /* ヘッダー */
 header {
     left: 200px;
@@ -88,13 +102,6 @@ header {
 .user-menu li a {
     color: #fff;
     text-decoration: none;
-}
-
-/* コンテンツエリア */
-main {
-    background-color: #f4f4f4;
-    flex: 1;
-    padding: 1rem;
 }
 
 /* フッター */
@@ -134,17 +141,6 @@ footer p {
     /* 左に移動して表示する */
 }
 
-main {
-    /* サイドバーの幅分だけコンテンツを右にずらす */
-    margin-left: 200px;
-    transition: all 0.3s;
-    border-bottom: solid #d9d9d9;
-    padding-left: 2rem;
-    padding-top: 1.5rem;
-    padding-right: 2rem;
-    /* box-shadow: inset 5px 0px 10px rgba(0,0,0,0.08); */
-}
-
 main.active {
     margin-left: 0;
     /* 左に移動して表示する */
@@ -158,7 +154,7 @@ div .dropdown i {
     padding: 15px;
     border-radius: 5px 5px 5px 5px;
     background-color: #fff;
-    height:100vh;
+    min-height:81vh;
     box-shadow: 2px 0px 10px rgba(0,0,0,0.08);
 }
 
