@@ -13,8 +13,8 @@ class AboutDetail extends Model
     protected $fillable = ['title', 'description','sort', 'updated_at'];
 
     //hasMany設定
-    public function about_detail_images()
+    public function about_detail_image()
     {
-        return $this->hasMany('App\AboutDetailImages');
+        return $this->hasMany('App\AboutDetailImage');
     }
 }

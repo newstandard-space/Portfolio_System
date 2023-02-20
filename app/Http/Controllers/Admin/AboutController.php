@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests\AboutDetailRequest;
 use App\Models\AboutDetail;
-use App\Models\AboutDetailImages;
+use App\Models\AboutDetailImage;
 
 use Carbon\Carbon;
 
