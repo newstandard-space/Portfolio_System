@@ -3,7 +3,7 @@
 
 
 
-<section id="about">
+<section id="works">
     <h1>About</h1>
     @foreach ($about_detail_list as $about_detail)
     <div class="work">

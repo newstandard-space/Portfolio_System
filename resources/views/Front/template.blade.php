@@ -13,7 +13,7 @@
     
 </head>
 
-<body>
+<body class="footerFixed">
 
 
     <!-- ヘッダー -->
@@ -33,7 +33,8 @@
     <!-- フッター -->
     @include('front.body.footer')
     <!-- フッター -->
-    <script src="scripts.js"></script>
+    <script src="{{ asset('frontend/js/default.js') }}"></script>
+
 </body>
 
 </html>
