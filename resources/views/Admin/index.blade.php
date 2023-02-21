@@ -5,8 +5,7 @@
 
 <div class="page-content">
 
-    
-
+    {{ request()->path() }}
 </div>
 
 

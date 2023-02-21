@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\AboutController;
+use App\Http\Controllers\Admin\WorkController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -43,6 +44,19 @@ Route::controller(AboutController::class)->prefix('admin')->group(function () {
     Route::post('/about/update', 'update')->name('admin.about.update');
     Route::delete('/about/delete', 'delete')->name('admin.about.delete');
     Route::post('/about/sort_update', 'sort_update')->name('admin.about.sort_update');
+});
+
+// Work All Route
+Route::controller(WorkController::class)->prefix('admin')->group(function () {
+    Route::get('/work', 'index')->name('admin.work.index');
+    Route::get('/work/create', 'create')->name('admin.work.create');
+    Route::post('/work/store', 'store')->name('admin.work.store');
+    Route::get('/work/create/images', 'create_images')->name('admin.work.create.images');
+    Route::get('/work/edit/{id}', 'edit')->name('admin.work.edit');
+    Route::get('/work/edit/images/{id}', 'edit_images')->name('admin.work.edit.images');
+    Route::post('/work/update', 'update')->name('admin.work.update');
+    Route::delete('/work/delete', 'delete')->name('admin.work.delete');
+    Route::post('/work/sort_update', 'sort_update')->name('admin.work.sort_update');
 });
 
 Route::middleware('auth')->group(function () {

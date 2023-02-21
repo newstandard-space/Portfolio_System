@@ -15,7 +15,7 @@ class AboutController extends Controller
 {
     public function index()
     {
-        $about_detail_list = AboutDetail::all();
+        $about_detail_list = AboutDetail::orderBy('sort')->get();
 
         return view('admin.about.index', ['about_detail_list' => $about_detail_list]);
     }
