@@ -137,3 +137,13 @@ section h1 {
         margin-bottom: 10px;
     }
 }
+
+.default-a-tag {
+    color: inherit;
+    text-decoration: none;
+}
+
+.default-a-tag:hover {
+    color: inherit;
+    text-decoration: none;
+}

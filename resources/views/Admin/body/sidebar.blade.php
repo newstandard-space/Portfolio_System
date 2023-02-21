@@ -1,5 +1,5 @@
 <div class="sidebar">
-    <div class="sidebar-title">ポートフォリオ<br>管理画面</div>
+    <div class="sidebar-title"><a href="{{route('admin.index')}}">ポートフォリオ<br>管理画面</a></div>
     <div class="sidebar-menu-dev">
         <ul class="sidebar-menu">
             <li id="about"><a href="{{route('admin.about.index')}}">Aboutページ</a></li>

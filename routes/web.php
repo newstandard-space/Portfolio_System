@@ -1,8 +1,11 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminController;
-use App\Http\Controllers\Admin\AboutController;
-use App\Http\Controllers\Admin\WorkController;
+use App\Http\Controllers\Admin\AboutController AS AdminAboutController;
+use App\Http\Controllers\Admin\WorkController AS AdminWorkController;
+use App\Http\Controllers\Front\HomeController;
+use App\Http\Controllers\Front\AboutController;
+use App\Http\Controllers\Front\WorkController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -33,8 +36,8 @@ Route::controller(AdminController::class)->group(function () {
     Route::get('admin', 'index')->name('admin.index');
 });
 
-// About All Route
-Route::controller(AboutController::class)->prefix('admin')->group(function () {
+// Admin About All Route
+Route::controller(AdminAboutController::class)->prefix('admin')->group(function () {
     Route::get('/about', 'index')->name('admin.about.index');
     Route::get('/about/create', 'create')->name('admin.about.create');
     Route::post('/about/store', 'store')->name('admin.about.store');
@@ -45,9 +48,9 @@ Route::controller(AboutController::class)->prefix('admin')->group(function () {
     Route::delete('/about/delete', 'delete')->name('admin.about.delete');
     Route::post('/about/sort_update', 'sort_update')->name('admin.about.sort_update');
 });
-
-// Work All Route
-Route::controller(WorkController::class)->prefix('admin')->group(function () {
+    
+// Admin Work All Route
+Route::controller(AdminWorkController::class)->prefix('admin')->group(function () {
     Route::get('/work', 'index')->name('admin.work.index');
     Route::get('/work/create', 'create')->name('admin.work.create');
     Route::post('/work/store', 'store')->name('admin.work.store');
@@ -58,6 +61,17 @@ Route::controller(WorkController::class)->prefix('admin')->group(function () {
     Route::delete('/work/delete', 'delete')->name('admin.work.delete');
     Route::post('/work/sort_update', 'sort_update')->name('admin.work.sort_update');
 });
+
+// Front All Route
+Route::controller(HomeController::class)->group(function () {
+    Route::get('/', 'index')->name('home.index');
+});
+
+// Front About Route
+Route::get('/about', [AboutController::class, 'index'])->name('front.about.index');
+
+// Front Work Route
+Route::get('/work', [WorkController::class, 'index'])->name('front.work.index');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

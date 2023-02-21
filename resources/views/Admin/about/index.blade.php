@@ -75,6 +75,7 @@
         }).done(function (json) {
             alert('並び順を変更しました。');
         }).fail(function (json) {
+            console.log(json);
             alert('並び順の変更が失敗しました。');
         });
     }

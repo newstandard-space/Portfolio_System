@@ -5,6 +5,7 @@
         <ul class="dropdown-menu dropdown-menu-end " aria-labelledby="dropdownMenuButton1">
             <li><a class="dropdown-item" href="#">プロフィール</a></li>
             <li><a class="dropdown-item" href="#">パスワード変更</a></li>
+            <li><a class="dropdown-item" href="{{ route('home.index') }}">ポートフォリオ</a></li>
             <li>
                 <hr class="dropdown-divider">
             </li>
