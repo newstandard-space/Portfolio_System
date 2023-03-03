@@ -35,7 +35,7 @@
                     <!-- <td>{{$about_detail->updated_at}}</td> -->
                     <td><a href="{{ route('admin.about.edit', $about_detail->id) }}"
                             class="btn btn-secondary btn-sm">詳細</a></td>
-                    <td><i class="bi bi-arrow-down-up"></i></td>
+                    <td><i class="bi bi-arrow-down-up sort-item-icon"></i></td>
                 </tr>
                 @endforeach
             </tbody>

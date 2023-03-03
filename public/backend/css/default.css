@@ -180,3 +180,11 @@ div .dropdown i {
     position: absolute;
     text-align:righ;
 }
+
+.sort-item-icon {
+    cursor: grab;
+}
+
+.sort-item-icon:active {
+    cursor: grabbing;
+}
